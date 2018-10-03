@@ -6,10 +6,15 @@ source:
   fn: thrift_sasl-0.3.1.tar.gz
   url: ../dist/thrift_sasl-0.3.1.tar.gz
 
+build:
+    number: 1
+
 requirements:
   build:
     - python
     - setuptools
+    - sasl
+    - thrift
 
   run:
     - python
@@ -18,7 +23,7 @@ requirements:
 
   test:
       imports:
-          - thrift_py
+          - thrift_sasl
 
 about:
   home: https://github.com/guillemborrell/thrift_sasl
