@@ -3,9 +3,8 @@ package:
   version: "0.3.1"
 
 source:
-  git_url: ../
-  git_tag: v0.3.1
-
+  fn: thrift_sasl-0.3.1.tar.gz
+  url: ../dist/thrift_sasl-0.3.1.tar.gz
 
 requirements:
   build:
@@ -13,13 +12,17 @@ requirements:
     - setuptools
 
   run:
+    - python
     - sasl>=0.2.1
     - thrift>=0.10.0
+
+  test:
+      imports:
+          - thrift_py
 
 about:
   home: https://github.com/guillemborrell/thrift_sasl
   license: Apache License, Version 2.0
   license_family: Apache
-  license_file: LICENSE
   summary: Thrift SASL Python module
   description: Thrift SASL Python module
